@@ -26,7 +26,6 @@ public class HelloServlet extends HttpServlet {
         double num2 = Integer.parseInt(request.getParameter("num2"));
         String operator = request.getParameter("operator");
         double rezult = 0;
-        String division = "/";
 
 
         if (operator == "division" && num2 != 0) {
