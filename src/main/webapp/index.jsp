@@ -9,6 +9,6 @@
 </h1>
 <br/>
 <a href="hello-servlet">Hello Servlet</a>
-<a href="first-servlet.jsp">первый JSP</a>
+<a href="first-servlet.jsp"> первый JSP</a>
 </body>
 </html>

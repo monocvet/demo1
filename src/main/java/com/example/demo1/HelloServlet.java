@@ -4,10 +4,9 @@ import java.io.*;
 import java.nio.file.FileStore;
 import java.util.Date;
 
-import jakarta.servlet.RequestDispatcher;
-import jakarta.servlet.ServletException;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
+import model.Cart;
 
 @WebServlet(name = "helloServlet", value = "/hello-servlet")
 public class HelloServlet extends HttpServlet {
@@ -22,42 +21,36 @@ public class HelloServlet extends HttpServlet {
 //        String lastName = request.getParameter("lastName");
 //        response.setContentType("text/html");
 
-//        double num1 = Integer.parseInt(request.getParameter("num1"));
-//        double num2 = Integer.parseInt(request.getParameter("num2"));
-//        String operator = request.getParameter("operator");
-//        double rezult = 0;
-//
-//
-//        if (operator == "division" && num2 != 0) {
-//            rezult = num1 / num2;
-//        } else if (operator == "*") {
-//            rezult = num1 * num2;
-//        } else if (operator == "+") {
-//            rezult = num1 + num2;
-//        }else if (operator == "-") {
-//            rezult = num1 - num2;
-//        }
-//
-
-        HttpSession session = request.getSession();
-//
 //        Integer count = (Integer) session.getAttribute("count");
 //        if (count == null) {
 //            count = 1;
 //            session.setAttribute("count", count);
-//        }else {
-//            session.setAttribute("count", + 1);
+//        } else {
+//            session.setAttribute("count", count + 1);
 //        }
 
-//        // Hello
-//        PrintWriter out = response.getWriter();
-//        out.println("<html><body>");
-//        out.println("<h1>Hello, " + num1 + " " + operator + " " + num2 + "</h1>");
-//        out.println("<h1>Rezultat:  " + rezult + "</h1>");
-//        out.println("</br>");
-//        out.println("<h1>" + new Date() + "</h1>");
-//        out.println("</body></html>");
-//        //Cart cart = (Cart) session.getA
+        // Hello
+        HttpSession session = request.getSession();
+        PrintWriter out = response.getWriter();
+        out.println("<html><body>");
+        out.println("<h1>" + "Hello, " +  "</h1>");
+        out.println("</br>");
+        out.println("<h1>" + new Date() + "</h1>");
+        out.println("</body></html>");
+        Cart cart = (Cart) request.getAttribute("cart");
+
+        String name = request.getParameter("name");
+        int a = Integer.parseInt("110");
+        Integer quantity = Integer.parseInt(request.getParameter("quantity")) ;
+
+        if (cart == null) {
+            cart = new Cart();
+
+            cart.setProduct(name);
+            cart.setQuantity(quantity);
+        }
+
+        session.setAttribute("cart", cart);
 
 //        RequestDispatcher dispatcher = request.getRequestDispatcher("/first-servlet.jsp");
 //        try {
@@ -68,7 +61,6 @@ public class HelloServlet extends HttpServlet {
 
 //        response.sendRedirect("https://www.google.com/");
     }
-
     public void destroy() {
     }
 }
