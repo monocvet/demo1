@@ -26,6 +26,7 @@ public class Servlet_books_1 extends HttpServlet {
                 pw.println(resultSet.getString("id") + " "
                         + resultSet.getString("quantity"));
             }
+            statement.close();
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
