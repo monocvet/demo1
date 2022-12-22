@@ -22,24 +22,24 @@ public class HelloServlet extends HttpServlet {
 //        String lastName = request.getParameter("lastName");
 //        response.setContentType("text/html");
 
-        double num1 = Integer.parseInt(request.getParameter("num1"));
-        double num2 = Integer.parseInt(request.getParameter("num2"));
-        String operator = request.getParameter("operator");
-        double rezult = 0;
-
-
-        if (operator == "division" && num2 != 0) {
-            rezult = num1 / num2;
-        } else if (operator == "*") {
-            rezult = num1 * num2;
-        } else if (operator == "+") {
-            rezult = num1 + num2;
-        }else if (operator == "-") {
-            rezult = num1 - num2;
-        }
+//        double num1 = Integer.parseInt(request.getParameter("num1"));
+//        double num2 = Integer.parseInt(request.getParameter("num2"));
+//        String operator = request.getParameter("operator");
+//        double rezult = 0;
+//
+//
+//        if (operator == "division" && num2 != 0) {
+//            rezult = num1 / num2;
+//        } else if (operator == "*") {
+//            rezult = num1 * num2;
+//        } else if (operator == "+") {
+//            rezult = num1 + num2;
+//        }else if (operator == "-") {
+//            rezult = num1 - num2;
+//        }
 //
 
-//        HttpSession session = request.getSession();
+        HttpSession session = request.getSession();
 //
 //        Integer count = (Integer) session.getAttribute("count");
 //        if (count == null) {
@@ -49,15 +49,15 @@ public class HelloServlet extends HttpServlet {
 //            session.setAttribute("count", + 1);
 //        }
 
-        // Hello
-        PrintWriter out = response.getWriter();
-        out.println("<html><body>");
-        out.println("<h1>Hello, " + num1 + " " + operator + " " + num2 + "</h1>");
-        out.println("<h1>Rezultat:  " + rezult + "</h1>");
-        out.println("</br>");
-        out.println("<h1>" + new Date() + "</h1>");
-        out.println("</body></html>");
-        //Cart cart = (Cart) session.getA
+//        // Hello
+//        PrintWriter out = response.getWriter();
+//        out.println("<html><body>");
+//        out.println("<h1>Hello, " + num1 + " " + operator + " " + num2 + "</h1>");
+//        out.println("<h1>Rezultat:  " + rezult + "</h1>");
+//        out.println("</br>");
+//        out.println("<h1>" + new Date() + "</h1>");
+//        out.println("</body></html>");
+//        //Cart cart = (Cart) session.getA
 
 //        RequestDispatcher dispatcher = request.getRequestDispatcher("/first-servlet.jsp");
 //        try {
