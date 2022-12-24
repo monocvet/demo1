@@ -27,7 +27,8 @@ public class LibraryServlet extends HttpServlet {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("select * from books");
             while (resultSet.next()) {
-                pw.println(resultSet.getString("title") + " " + resultSet.getString("author")
+                pw.println(resultSet.getString("title") + " " +
+                        resultSet.getString("author")
                         + " " + resultSet.getString("quantity"));
             }
             statement.close();

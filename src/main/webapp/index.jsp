@@ -11,7 +11,7 @@
 <a href="hello-servlet">Hello Servlet</a>
 <a href="first-servlet.jsp"> первый JSP</a>
 <br/>
-<a href="/servlet_1">Сервлет книги - 1</a> <br>
-<a href="/servlet_2">Сервлет книги - 2</a>
+<a href="/servlet1">Сервлет книги - 1</a> <br>
+<a href="/servlet2">Сервлет книги - 2</a>
 </body>
 </html>
